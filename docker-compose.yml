@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  clonewars:
+    build: .
+    image: clone-wars-chrono-tracker:latest
+    container_name: clonewars
+    restart: unless-stopped
+    ports:
+      - 5555:80 # for Fives...
+    #volumes:
+    #  - <volume_name>:<container_location>

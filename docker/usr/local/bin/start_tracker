@@ -1,0 +1,2 @@
+#!/bin/sh
+gunicorn --workers 2 -D -b unix:/tmp/clone-wars-chrono-tracker.sock -m 000 'wsgi:create_app()' && nginx -g 'daemon off;'
